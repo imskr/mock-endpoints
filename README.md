@@ -1,15 +1,18 @@
-# API-mock
+# Mock-Endpoints
 
 ## Installation:
 
 ```bash
-# For first time run following commands
-$ git clone https://github.com/imskr/API-mock.git
-$ cd API-mock
-$ docker-compose up --build # run `docker-compose up` for subsequent runs
-# in new shell run following to create db
-$ docker-compose exec web rake db:create
-$ docker-compose exec web rake db:migrate
+$ git clone https://github.com/imskr/mock-endpoints.git
+$ cd mock-endpoints
+$ bundle install
+$ rails db:migrate
+$ rails db:migrate RAILS_ENV=test
+$ rails s
 ```
 
 > Server is up and running at `localhost:3000`
+
+## Test
+
+> Run `bundle exec rspec`
